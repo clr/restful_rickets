@@ -1,0 +1,733 @@
+body {
+	margin: 0px;
+	padding: 0.25em 1.3em 2em 1.3em;
+	font-family: verdana,arial,helvetica,sans-serif;
+	line-height: 1.166;	
+}
+
+body, input, textarea, select, option {
+	font-family: verdana,arial,helvetica,sans-serif;
+}
+
+button {
+	cursor: hand;
+	cursor: pointer;
+}
+
+/* Buttons */
+a.new div, a.edit div, a.destroy div {
+  padding: 2px 0.2em 0 21px;
+  font-size: 0.7em;
+  font-weight: normal;
+  color: black;
+}
+a.new div {
+  background: transparent url(/images/rickets/blue/button_new.png) no-repeat center left;
+}
+a.edit div {
+  background: transparent url(/images/rickets/blue/button_edit.png) no-repeat center left;
+}
+a.destroy div {
+  background: transparent url(/images/rickets/blue/button_destroy.png) no-repeat center left;
+}
+
+/* Lefthand Navigation */
+div.left_pane {
+	float: left;
+	width: 16%;
+	margin: 1em 2% 0 2%;
+	padding: 0;
+}
+div.left_pane table {
+  width: 100%;
+  border-collapse: collapse;
+}
+div.left_pane table td {
+  height: 25px;
+  padding: 0;
+}
+div.left_pane table thead td.left {
+  width: 6px;
+  height: 25px;
+  background: transparent url(/images/rickets/blue/ext_leftnav_top_left.png) no-repeat;
+}
+div.left_pane table thead td.center {
+  background: transparent url(/images/rickets/blue/ext_leftnav_top_center.png) repeat-x;
+}
+div.left_pane table thead td.right{
+  width: 6px;
+  background: transparent url(/images/rickets/blue/ext_leftnav_top_right.png) no-repeat;
+}
+div.left_pane table tbody td.left {
+  width: 6px;
+  background: transparent url(/images/rickets/blue/ext_leftnav_middle_left.png) repeat-y;
+}
+div.left_pane table tbody td.center {
+  background: #e7e7e7;
+}
+div.left_pane table tbody td.right{
+  width: 6px;
+  background: transparent url(/images/rickets/blue/ext_leftnav_middle_right.png) repeat-y;
+}
+div.left_pane table tfoot td.left {
+  width: 6px;
+  background: transparent url(/images/rickets/blue/ext_leftnav_bottom_left.png) no-repeat;
+}
+div.left_pane table tfoot td.center {
+  background: transparent url(/images/rickets/blue/ext_leftnav_bottom_center.png) repeat-x;
+}
+div.left_pane table tfoot td.right{
+  width: 6px;
+  background: transparent url(/images/rickets/blue/ext_leftnav_bottom_right.png) no-repeat;
+}
+div.left_pane ul {
+	list-style: none;
+	padding: 0;
+	font-size: 0.8em;
+}
+div.left_pane ul ul {
+  font-size: 1em;
+}
+div.left_pane ul li {
+  padding: 0 0 0.3em 1em;
+}
+
+
+/* EXT style logout */
+a.close {
+	position: absolute;
+	display: block;
+	width: 15px;
+	height: 15px;
+	top: 3px;
+	right: 3px;
+	background: url(/images/rickets/blue/ext_close_window.png) no-repeat right top;
+	background-position: 0px 0px;
+}
+a.close:hover {
+	background-position: -15px 0px;
+}
+
+/* EXT style tabs */
+div.ext_style div.tab_bar {
+  border-top: 1px solid #99bbe8;
+  position: relative;
+  width: 100%;
+  height: 24px;
+  background: #eaeaea url(/images/rickets/blue/ext_tab_bar.png) repeat-x;
+}
+
+div.ext_style div.tab_bar a {
+  float: left;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+div.ext_style div.tab_bar a div {
+  float: left;
+  height: 20px;
+  font-size: 1em;
+  padding-top: 4px;
+  background: transparent url(/images/rickets/blue/ext_tab_center.png) repeat-x;
+  color: #ababab;
+}
+div.ext_style div.tab_bar a div.left {
+  width: 10px;
+  background: transparent url(/images/rickets/blue/ext_tab_left.png) no-repeat top left;
+}
+div.ext_style div.tab_bar a div.right {
+  width: 10px;
+  background: transparent url(/images/rickets/blue/ext_tab_right.png) no-repeat top right;
+}
+
+div.ext_style div.tab_bar a.selected div {
+  background: transparent url(/images/rickets/blue/ext_tab_center_selected.png) repeat-x;
+  font-weight: bold;
+  color: #15428b;
+}
+div.ext_style div.tab_bar a.selected div.left {
+  background: transparent url(/images/rickets/blue/ext_tab_left_selected.png) no-repeat top left;
+}
+div.ext_style div.tab_bar a.selected div.right {
+  background: transparent url(/images/rickets/blue/ext_tab_right_selected.png) no-repeat top right;
+}
+
+div.ext_style div.tab_bar a:hover div {
+  background: transparent url(/images/rickets/blue/ext_tab_center_hover.png) repeat-x;
+  color: #9d9d9d;
+}
+div.ext_style div.tab_bar a:hover div.left {
+  background: transparent url(/images/rickets/blue/ext_tab_left_hover.png) no-repeat top left;
+}
+div.ext_style div.tab_bar a:hover div.right {
+  background: transparent url(/images/rickets/blue/ext_tab_right_hover.png) no-repeat top right;
+}
+
+
+/* EXT STYLE */
+div.ext_style {
+  float: left;
+  width: 48em;
+  border-top: 0px;
+  border-right: 1px solid #99bbe8;
+  border-bottom: 1px solid #99bbe8;
+  border-left: 1px solid #99bbe8;
+  background: #d0d0d0;
+  clear: both;
+}
+
+div.ext_style div.right_pane {
+  float: left;
+  width: 80%;
+}
+
+div.ext_style div.right_pane_border {
+  border-left: 1px solid #99bbe8;
+}
+
+div.ext_style div.header {
+  height: 20px;
+  padding: 4px 0 0 0;
+  background: transparent url(/images/rickets/blue/ext_header.png) repeat-x;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #15428b;
+  text-indent: 1.7em;
+}
+
+div.ext_style div.button_bar {
+  height: 25px;
+  background: transparent url(/images/rickets/blue/ext_button_bar.png) repeat-x;
+}
+
+div.ext_style div.button_bar > div {
+  float: left;
+  padding: 3px 3px 0 3px;
+}
+
+div.ext_style div.button_bar div.separator {
+  width: 2px;
+  height: 25px;
+  padding: 0px;
+  background: transparent url(/images/rickets/blue/ext_button_bar_separator.png) repeat-x;
+}
+
+div.ext_style div.button_bar div.search {
+  float: right;
+  padding: 2px 0 0 0;
+  font-size: 0.7em;
+}
+
+div.ext_style div.button_bar div.search select {
+  margin-right: 0.9em;
+  border: 1px solid #c8c8c8;
+  background: white url(/images/rickets/blue/ext_input.png) repeat-x top center;
+}
+
+div.ext_style div.button_bar form button.search {
+  float: right;
+  width: 17px;
+  height: 20px;
+  margin: 2px 0 0 0;
+  border: 0;
+  background: transparent url(/images/rickets/blue/ext_search.png) no-repeat;
+}
+
+div.ext_style div.button_bar form button:hover.search {
+  background: transparent url(/images/rickets/blue/ext_search_hover.png) no-repeat;
+}
+
+div.ext_style div.button_bar div.search input {
+  width: 9em;
+  height: 16px;
+  border: 1px solid #c8c8c8;
+  background: white url(/images/rickets/blue/ext_input.png) repeat-x top center;
+}
+
+div.ext_style div.button_bar div.auto_complete div {
+  border: 1px outset #f9f9f9;
+  background: #f9f9f9;
+}
+
+div.ext_style div.button_bar div.auto_complete div ul {
+  margin: 0;
+  border: 1px inset #f9f9f9;
+  padding: 0px;
+  background: white;
+  list-style-type: none;
+}
+
+div.ext_style div.button_bar div.search div.auto_complete ul a:hover {
+  border-top: 1px ridge #ededed;
+  border-right: 0;
+  border-bottom: 1px ridge #ededed;
+  border-left: 0;
+  background: #fafafa;
+}
+
+div.ext_style table.list {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+div.ext_style table.list thead tr {
+  height: 22px;
+  background: transparent url(/images/rickets/blue/ext_th.png) repeat-x;
+}
+
+div.ext_style table.list thead th {
+  height: 22px;
+  border: 1px ridge #d0d0d0;
+  padding: 0 0.2em 0 0.4em;
+}
+
+div.ext_style table.list thead th:hover {
+  background: transparent url(/images/rickets/blue/ext_th_hover.png) repeat-x;
+}
+
+div.ext_style table.list thead th a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #4a4a4b;
+  font-size: 0.7em;
+  line-height: 1.2em;
+  font-weight: normal;
+  text-align: left;
+}
+div.ext_style table.list thead th a.sort_down {
+  background: url(/images/rickets/blue/ext_header_arrow_down.png) no-repeat;
+  text-indent: 18px;
+}
+div.ext_style table.list thead th a.sort_up {
+  background: url(/images/rickets/blue/ext_header_arrow_up.png) no-repeat;
+  text-indent: 18px;
+}
+
+div.ext_style table.list tbody tr {
+  border-left: 1px solid #99bbe8;
+}
+
+div.ext_style table.list tbody tr:hover {
+  background: #fafafa url(/images/rickets/blue/ext_tr_hover.png) repeat-x;
+  cursor: pointer;
+}
+
+div.ext_style table.list tbody tr.selected {
+  background: #fafafa url(/images/rickets/blue/tr_selected.png) repeat-x;
+}
+
+div.ext_style table.list tbody tr.selected td a {
+  font-weight: bold;
+}
+
+div.ext_style table.list tbody td {
+  height: 22px;
+  border-bottom: 1px ridge #ededed;
+  padding: 0.2em 0.5em 0.3em 0.4em;
+  font-size: 0.7em;
+  font-weight: normal;
+  color: black;
+  text-align: left;
+  vertical-align: top;
+}
+
+div.ext_style table.list tbody td.primary {
+}
+
+div.ext_style table.list tfoot tr {
+  height: 25px;
+  border-top: 1px solid #99bbe8;
+  border-left: 1px solid #99bbe8;
+  background: transparent url(/images/rickets/blue/ext_footer.png) repeat-x;
+}
+
+div.ext_style table.list tfoot td {
+  padding: 0.25em 0.5em 0 1.3em;
+  font-size: 0.6em;
+  font-weight: normal;
+  color: #4a4a4b;
+  text-align: left;
+}
+
+div.ext_style table.form_area {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid #99bbe8;
+  border-right: 1px solid #f8fbfc;
+  border-left: 1px solid #f8fbfc;
+  padding: 0.7em 0 1.1em 0;
+  background: #dfe8f6;
+}
+
+div.ext_style table.form_area tbody {
+}
+
+div.ext_style table.form_area td {
+  width: 77.5%;
+  padding: 0.3em 4.5% 0.1em 0;
+  font-size: 0.7em;
+  font-weight: normal;
+}
+
+
+div.ext_style table.form_area td div.subset {
+  border: 1px solid #d3d3d3;
+  padding: 0.6em;
+}
+
+div.ext_style table.form_area td.label {
+  width: 16.1%;
+  border-left: 1px solid #99bbe8;
+  padding: 0.7em 0 0.3em 1.9%;
+  vertical-align: top;
+}
+
+div.ext_style table.form_area tr.top_padding td  {
+  font-size: 0.23em;
+}
+
+div.ext_style table.form_area tr.bottom_padding td  {
+  font-size: 0.53em;
+}
+
+div.ext_style table.form_area input, div.ext_style table.form_area textarea, div.ext_style table.form_area select {
+  border: 1px solid #d3d3d3;
+  padding: 0.3em 0.31em 0.4em 0.31em;
+  background: white url(/images/rickets/blue/ext_input.png) repeat-x top center;
+}
+
+div.ext_style table.form_area input.string, div.ext_style table.form_area textarea, div.ext_style table.form_area select {
+  width: 97%;
+}
+
+div.ext_style table.form_area div.date_span {
+  margin-bottom: 0.3em;
+}
+
+div.ext_style table.form_area div.date_span select {
+  width: auto;
+}
+
+div.ext_style table.form_area textarea {
+  height: 3.7em;
+  font-size: 1.1em;
+}
+
+div.ext_style table.form_area textarea.tinymce {
+  height: 9.7em;
+}
+
+div.ext_style table.form_area tfoot td {
+  border-left: 1px solid #99bbe8;
+  padding: 0.7em 0 3.1em;
+  text-align: center;
+}
+
+
+div.ext_style table.form_area tfoot button, button.delete_button {
+  width: 75px;
+  height: 21px;
+  margin: 0px 0.5em;
+  border: 0px;
+  padding: 0;
+  background: transparent url(/images/rickets/blue/ext_action.png) repeat-x;
+  vertical-align: middle;
+  text-align: center;
+}
+
+div.ext_style table.form_area tfoot button:hover, button.delete_button:hover {
+  background: transparent url(/images/rickets/blue/ext_action_hover.png) repeat-x;
+}
+
+table#form_area_video {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid #99bbe8;
+  border-right: 1px solid #f8fbfc;
+  border-left: 1px solid #f8fbfc;
+  padding: 0.7em 0 1.1em 0;
+  background: #f6f6f6;
+}
+
+table#form_area_video td.label{
+  width: 25%;
+  
+  font-size: 1.0em;
+  font-weight: normal;
+}
+
+table#form_area_video td.control {
+  width: 75%;
+
+  font-size: 1.0em;
+  font-weight: normal;	
+	
+}
+
+
+
+div.ext_style div.button_bar a {
+  clear: none;
+  display: block;
+  width: auto;
+  margin: 0px;
+  border: 0px;
+  padding: 2px 4px;
+  text-decoration: none;
+}
+
+div.ext_style div.button_bar a:hover {
+  border: 1px ridge #7293be;
+  padding: 1px 3px;
+  background: transparent url(/images/rickets/blue/ext_button_a_hover.png) repeat-x;
+  text-decoration: none;
+}
+
+/* EXT STYLE FORM PANELS */
+div.ext_style table.form_area td.panel {
+  width: 96.1%;
+  border-left: 1px solid #99bbe8;
+  padding: 0.1em 1.9% 0.3em 1.9%;
+  vertical-align: top;
+  font-size: 1em;
+}
+div.ext_panel {
+  width: 98%;
+  border: 1px solid #c8c8c8;
+}
+div.ext_panel div.button_bar {
+  background: transparent url(/images/rickets/blue/ext_th.png) repeat-x; 
+}
+div.ext_panel div.inline_bar {
+	position: relative;
+	text-align: right;
+	display: block;
+	background: #ccc url(/images/ext_inline_bar.png) no-repeat;
+	width: 100%;
+	margin: 0 0 1.4em -3em;
+	padding-left: 3em;
+}
+div.ext_panel div.inline_bar a.new {
+	display: block;
+	position: absolute;
+	right: 2.3em;
+	top: 3px;
+	text-decoration: none;
+}
+div.ext_panel div.inline_bar a.new div {
+	font-size: .9em;
+  padding: 1em 2em 1em 0;
+  font-weight: bold;
+  color: black;
+  background: transparent url(/images/rickets/blue/button_new.png) no-repeat right .8em;
+}
+div.ext_panel ul {
+  margin: 0;
+  padding: 0.4em 1.7em 1em 1.7em;
+  list-style-type: none;
+  background: white;
+  font-size: 0.61em;
+}
+div.ext_panel li {
+  margin-top: 1em;
+	background: url(/images/rickets/blue/ext_bullet_handle_background.png) no-repeat;
+	padding: 0 0 0 3em;
+	border: 1px solid #ccc;
+	cursor: hand;
+	cursor: pointer;
+}
+div.ext_panel li div, div.ext_panel li form {
+  display: inline;
+  clear: none;
+}
+div.ext_style div.ext_panel input.string {
+  width: 72%;
+}
+div.ext_panel li button.save {
+  width: 24px;
+  height: 20px;
+  margin: 0px;
+  border: 0px;
+  background: transparent url(/images/rickets/blue/ext_inline_save.png) no-repeat;
+	cursor: hand;
+	cursor: pointer;
+}
+div.ext_panel li button.destroy {
+  width: 24px;
+  height: 20px;
+  margin: 0px;
+  border: 0px;
+  background: transparent url(/images/rickets/blue/ext_inline_destroy.png) no-repeat;
+	cursor: hand;
+	cursor: pointer;
+}
+
+/* EXT STYLE FORM SUB-PANELS */
+div.ext_sub_panel {
+  display: block;
+  width: 100%;
+  font-size: 1em;
+}
+div.ext_sub_panel ul {
+  margin: 0 0 0 0;
+  padding: 0.7em 1.7em 0.1em 0em;
+	list-style-type: none;
+  background: #fff;
+  font-size: 1em;
+}
+div.ext_sub_panel li {
+  margin-bottom: 0.9em;
+	margin-top: .3em;
+	padding-bottom: 1em;
+	background: url(/images/rickets/blue/ext_bullet_handle_background.png) no-repeat;
+}
+div.ext_sub_panel div.inline_bar {
+	text-align: right;
+	background: #ccc url(/images/ext_inline_bar.png) no-repeat;
+	width: 100%;
+	margin: 0 0 .9em -3em;
+	padding-left: 3em;
+}
+div.ext_sub_panel li span {
+  width: 5em;
+	display: inline-block;
+	margin: .4em 0 .4em 0;
+}
+div.ext_sub_panel li input {
+	margin: .1em 0 .1em 0;
+}
+div.ext_sub_panel li div, div.ext_sub_panel li form {
+  display: block;
+  clear: both;
+}
+div.ext_style div.ext_sub_panel input.string {
+  width: 72%;
+}
+div.ext_sub_panel li button.save {
+  width: 24px;
+  height: 20px;
+  margin: 0px;
+  border: 0px;
+  background: transparent url(/images/rickets/blue/ext_inline_save.png) no-repeat; 
+}
+div.ext_sub_panel li button.destroy {
+  width: 24px;
+  height: 20px;
+  margin: 0px;
+  border: 0px;
+  background: transparent url(/images/rickets/blue/ext_inline_destroy.png) no-repeat; 
+}
+
+div.ext_sortable_panel {
+border: 1px solid #ccc;
+}
+
+div.ext_sortable_panel ul {
+list-style-type: none;
+margin: 0;
+padding: 1em 0 1em 0;
+}
+
+div.ext_sortable_panel ul li {
+	list-style-type: none;
+	margin: 0 0 1em 1.7em;
+	padding: 0;
+	width: 90%;
+	border: 1px solid #ccc;
+	cursor: hand;
+	cursor: pointer;
+}
+
+div.ext_sortable_panel ul li div.inline_bar {
+	text-align: right;
+	background: #ccc url(/images/ext_inline_bar.png) no-repeat;
+	width: 100%;
+	margin: 0;
+	padding-left: 0;
+}
+
+div.ext_sub_panel ul li div.panel_content {
+	padding: 1em 2em 1em 2.5em;
+}
+
+div.ext_sub_panel ul li div.panel_content {
+	font-size: .8em;
+}
+
+ul#ul_home_page_features li div.panel_content div.caption {
+  margin: 1em 0 0 0;
+}
+
+ul#ul_home_page_features li div.panel_content div.caption label {
+	font-size: .9em;
+	display: block;
+	padding-bottom: .4em;
+}
+
+ul#ul_home_page_features li div.panel_content div.caption textarea {
+	font-size: .8em;
+}
+
+/* PAGINATION */
+div.pagination a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+div.pagination span.current {
+  color: #4a4a4b
+}
+
+div.pagination span.prev {
+  background: transparent url(/images/rickets/blue/resultset_previous.png) no-repeat;
+  font-size: 12px;
+}
+div.pagination span.disabled span.prev {
+  background: transparent url(/images/rickets/blue/resultset_previous_disabled.png) no-repeat;
+}
+
+div.pagination span.next {
+  background: transparent url(/images/rickets/blue/resultset_next.png) no-repeat;
+  font-size: 12px;
+}
+div.pagination span.disabled span.next {
+  background: transparent url(/images/rickets/blue/resultset_next_disabled.png) no-repeat;
+}
+
+div.pagination_info {
+  float: right;
+}
+
+/* ADD FEATUERS */
+div.add_program {
+	font-size: .8em;
+	padding: 1.1em 1.7em;
+}
+div.add_program input {
+  width: 80%;
+  font-size: 0.85em;
+}
+div.add_program ul.scrollable, div.add_program ul.auto_complete {
+	overflow-y: scroll;
+	height: 9em;
+  border: 1px solid #cccccc;
+	padding: 0;
+}
+div.add_program ul.auto_complete {
+  border: 1px solid #999999;
+}
+div.add_program ul.scrollable li, div.add_program ul.auto_complete li {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid #cccccc;
+  padding: 0.15em 0;
+  background: none;
+  text-indent: 0.7em;
+}
+select#versioned_page_additional_items_count, select#versioned_page_featured_programs_count {
+	width: 5em;
+}

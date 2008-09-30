@@ -1,0 +1,53 @@
+h1. SUMMARY
+
+restful_rickets provides a generator that creates an entire set of RESTful CRUD cycle for a resource with a slick interface resembling the javascript Ext library, but without using that framework.  We use jQuuery instead.  This generator approach is better than using a plugin such as ActiveScaffold or Hobo because our solution results in clean Rails files, whereas ActiveScaffold and Hobo modify Rails conventions.  This makes our generator approach easier for Rails developers to work with -- no surprises.
+
+h1. INSTALLATION
+
+<pre>
+<code>
+#> ruby script/plugin install git://github.com/clr/restful_rickets.git
+#> rake rickets:assets
+</code>
+</pre>
+
+h1. USAGE
+
+The lib will be picked up automatically when Rails loads.  This plugin is a standard Rails generator, and works by invoking:
+
+<pre>
+<code>
+#> ruby script/generate ricket ModelName [attribute:type attribute:type ...]
+</code>
+</pre>
+
+See the example below for more details.
+
+h1. EXAMPLE
+
+Click on the image for a live example:
+
+!{border:0}http://github.com/clr/restful_rickets/tree/master%2Fassets%2Fimages%2Frickets%2Fblue%2Fexample.png?raw=true!:http://rickets.progmatica.com/
+
+I created the above application with just the following commands, copied from my bash history, using Rails v2.1:
+
+<pre>
+<code>
+rails ./rickets_demo
+cd rickets_demo/
+rake rails:freeze:edge
+script/plugin install git://github.com/dchelimsky/rspec.git
+script/plugin install git://github.com/dchelimsky/rspec-rails.git
+script/generate rspec
+script/plugin install git://github.com/mislav/will_paginate.git
+script/plugin install git://github.com/aaronchi/jrails.git
+script/plugin install git://github.com/clr/restful_rickets.git
+rake rickets:assets
+script/generate ricket Dog name:string breed_id:integer adult:boolean description:text
+rake db:create
+rake db:migrate
+script/server
+</code>
+</pre>
+
+And then I can navigate to the running app at "http://localhost:3000/dogs":http://localhost:3000/dogs and add dogs.
